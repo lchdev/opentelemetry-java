@@ -55,10 +55,10 @@ class SerializerTest {
                 DOUBLE_GAUGE_NO_ATTRIBUTES,
                 DOUBLE_GAUGE_MULTIPLE_ATTRIBUTES))
         .isEqualTo(
-            "# TYPE target info\n"
+            "# TYPE target gauge\n"
                 + "# HELP target Target metadata\n"
                 + "target_info{kr=\"vr\"} 1\n"
-                + "# TYPE otel_scope_info info\n"
+                + "# TYPE otel_scope_info gauge\n"
                 + "# HELP otel_scope_info Scope metadata\n"
                 + "otel_scope_info{otel_scope_name=\"full\",otel_scope_version=\"version\",ks=\"vs\"} 1\n"
                 + "# TYPE monotonic_cumulative_double_sum_total counter\n"
@@ -126,10 +126,10 @@ class SerializerTest {
                 DOUBLE_GAUGE_NO_ATTRIBUTES,
                 DOUBLE_GAUGE_MULTIPLE_ATTRIBUTES))
         .isEqualTo(
-            "# TYPE target info\n"
+            "# TYPE target gauge\n"
                 + "# HELP target Target metadata\n"
                 + "target_info{kr=\"vr\"} 1\n"
-                + "# TYPE otel_scope_info info\n"
+                + "# TYPE otel_scope_info gauge\n"
                 + "# HELP otel_scope_info Scope metadata\n"
                 + "otel_scope_info{otel_scope_name=\"full\",otel_scope_version=\"version\",ks=\"vs\"} 1\n"
                 + "# TYPE monotonic_cumulative_double_sum counter\n"

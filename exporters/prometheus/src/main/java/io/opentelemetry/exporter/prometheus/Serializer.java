@@ -237,7 +237,7 @@ abstract class Serializer {
   }
 
   private static void writeResource(Resource resource, Writer writer) throws IOException {
-    writer.write("# TYPE target info\n");
+    writer.write("# TYPE target gauge\n");
     writer.write("# HELP target Target metadata\n");
     writer.write("target_info{");
     writeAttributePairs(writer, /* initialComma= */ false, resource.getAttributes());
@@ -246,7 +246,7 @@ abstract class Serializer {
 
   private static void writeScopeInfo(
       InstrumentationScopeInfo instrumentationScopeInfo, Writer writer) throws IOException {
-    writer.write("# TYPE otel_scope_info info\n");
+    writer.write("# TYPE otel_scope_info gauge\n");
     writer.write("# HELP otel_scope_info Scope metadata\n");
     writer.write("otel_scope_info{");
     writeScopeNameAndVersion(writer, instrumentationScopeInfo);
